@@ -1,4 +1,4 @@
-li {
+/* li {
   padding: 5px;
   margin: 5px;
   background: #faebd7;
@@ -16,4 +16,33 @@ li {
 
 .form-group {
   margin-bottom: 5px;
+} */
+
+:root{
+  --textColor: rgb(199, 251, 255);
+  --backgroundColor: rgba(255, 255, 255, 0.4);;
+  --clear: rgba(0, 0, 0, 0);
+  --font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+.jumbotron{
+  color: var(--textColor);
+  text-align: center;
+  background-color: var(--clear);
+  font-size: 2em;
+}
+
+body{
+  background-color: var(--clear);
+  color: var(--textColor);
+  font-family: var(--font-family);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 2em;
+}
+
+.btn{
+  color: var(--textColor);
+  background-color: var(--backgroundColor);
+  margin: 1em; 
 }

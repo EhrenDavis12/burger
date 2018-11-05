@@ -1,38 +1,63 @@
-<h1>Burgers!</h1>
-
-<h2>Burgers that are not devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that are devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+<div class="row">
+  <div class="col-sm-12">
+    <div class="jumbotron">
+      <img class="col-sm-6" src="./assets/images/banner.jpg" alt="header">
+      <h1 class="jumboWords">Are you hungry yet!</h1>
+    </div>
   </div>
+</div>
 
-  <div class="form-group">
-    <label for="devoured">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Sevoured!<br>
-    <input type="radio" name="devoured" value="0"> Awake
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Burgers at the ready!</h2>
+        <ul>
+          {{#each burgers}}
+          {{#unless devoured}}
+          {{> burgers/burger-block devoured=true}}
+          {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
   </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Burgers that have been eaten!</h2>
+        <ul>
+          {{#each burgers}}
+          {{#if devoured}}
+          {{> burgers/burger-block devoured=false}}
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <button type="submit">Add Burger</button>
-</form>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Add a Burger:</h2>
+        <form class="create-form">
+          <div class="form-group">
+            <label for="ca">New Burger Name:</label>
+            <input type="text" id="ca" name="name">
+          </div>
+
+          <div class="form-group">
+            <label for="devoured">Current burger state?</label><br>
+            <input type="radio" name="devoured" value="0" checked> Ready to eat!<br>
+            <input type="radio" name="devoured" value="1"> Has been eaten
+          </div>
+
+          <button type="submit">Add Burger</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
