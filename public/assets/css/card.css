@@ -1,0 +1,25 @@
+:root{
+    --cardBkgColor: moccasin;
+    --cardTextColor: black;
+  }
+
+.card{
+    background-color: var(--cardBkgColor);
+    color: var(--cardTextColor);
+    border-width: 0.3em;
+    border-style: ridge;
+    border-color: var(--borderColor);
+    font-size: 0.6em;
+    margin-bottom: 20px;
+}
+
+.card-title{
+    text-align: center;
+    font-size: 1.5em;
+}
+.card-subtitle{
+    margin-left: 20px;
+}
+.card-text{
+    margin-left: 20px;
+}
